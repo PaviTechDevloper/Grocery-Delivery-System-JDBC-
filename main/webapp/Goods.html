@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    body {
+    background-image: url("https://i0.wp.com/www.websysinfotech.in/wp-content/uploads/2021/07/SUPERMARKET-2.jpg?fit=900%2C371&ssl=1");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+      .head {
+      position: absolute;
+      top: 0px; 
+      left: 60px; 
+      font-family: 'Comic Sans MS', cursive;
+      font-size:20px;
+    }
+
+
+    .search-container {
+    display:inline;
+      position: relative;
+      margin-bottom:670px;
+    }
+
+    .search-bar {
+      margin-top:690px;
+      padding: 20px;
+      width: 700px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      margin-left:500px;
+    }
+
+    
+    .category-img{
+    float:left;
+    border-radius: 100%;
+    width: 160px;
+    box-shadow: 0px 5px 4px #18283f75;
+    margin:right;
+    }
+    #cartButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007BfF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #cartSection {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+  </style>
+</head>
+<body>
+<div class="head">
+<h2 style="color:white;">MarketMingle</h2>
+</div>
+ <div class="search-container">
+ 
+    <input type="text" class="search-bar" placeholder="Search...">
+    
+    	<h1 style="color:white;" >---------------------------------------------------------Shop by Category-------------------------------------------------------</h1>
+    <div class="category">
+    <ul style="list-style-type: none; margin: 0; padding: 100px;">
+        <li style="float: left; width: 15%; margin: 9px 80px 50px 120px;">
+            <a onclick="GAShopByCategorySource()" href="ExoticFruits.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Exotic+Fruits.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px; border: 3px solid white;">
+
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">ExoticFruits</span>
+            </a>
+        </li>
+        <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="Meat.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Meats%2C+Poultry+%26+Seafood.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 20px;">Meat,Poultry&Seafood</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="Dairy.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Bakery+%26+Dairy.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 70px;">Dairy</span>
+            </a>
+        </li>
+        <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="grocery.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Grocery.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 60px;">Grocery</span>
+            </a>
+        </li>
+        
+         <li style="float: left; width: 15%; margin: 9px 80px 50px 120px;clear: both;">
+            <a onclick="GAShopByCategorySource()" href="health.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Health+%26+Wellness.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 40px;">Health&Wellness</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="breads.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Fresh+Artisanal+Breads.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">ArtisanalBreads</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="gifts.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/The+Gift+Studio.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">The Gift Studio</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="choco.html">
+                <img class="category-img" alt="" src="https://gnbdevcdn.s3.ap-southeast-1.amazonaws.com/Images/Category/Big/Chocolates%2C+Confectionery.png" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">Chocolate</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    	
+    </div>
+  
+    </li>
+    </ul>
+    <button id="cartButton" onclick="shopNow()">Shopping Cart</button>
+<script>
+
+function shopNow() {
+    // Add your logic here to redirect to the shopping page or perform any other action
+    //alert("Your order succssfully")
+    window.location.href="cart.html";
+}
+
+
+</script>
+    </body>
+    </html>
+    

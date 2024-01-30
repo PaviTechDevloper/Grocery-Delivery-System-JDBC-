@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url("https://fakitchen.files.wordpress.com/2016/03/indian-spices.jpg");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 60px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #007BfF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+    
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color:white;">Grocery</h1>
+</center>
+ <div class="line-container">
+ 
+ 
+<div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://image.made-in-china.com/2f0j00VikgrbGFbOuW/100-Pure-Natural-Organic-Red-Cloves-Carnation-for-Wholesale-Bulk-Food-Seasoning-Single-Spices-Cloves.webp">
+        <h2>Red Cloves</h2>
+        <div class="price-container">
+          <p>1 kg</p>
+          <div class="small-box">
+              <p>Rs.300</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Red Cloves', 300, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ <div class="card">
+    <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gLDwhgZM05B-uslhV9iIX7o1cNNHhPdEwg&usqp=CAU">
+    <h2>Black Pepper</h2>
+    <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.600</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Black Pepper', 600, 'quantity2')">Add to Cart</button>
+    </div>
+    
+</div>
+  
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/ajwain-seeds-what-is-carom-seed-small-pi6nta5lc52nlz8tskck9cn2s5aeyyx40pd4e19xjc.jpg">
+        <h2>Carom Seeds</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.200</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Carom Seeds', 200, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/coriander-jpg-pi7enhf8gdqbs5s6uplvs17d3p046fo9uyk0eeofm0.jpg">
+        <h2>Coriander Seeds</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.120</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Coriander Seeds', 120, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/Caraway-shahi-jeera-image-Indian-spice-buy-spices-online-spiceitupp-pi7ey8oqo4ggni5o1d06bbh9ufzc9qdoo7c24eq8eg.jpg" style="clear:both";>
+        <h2>Cumin Seeds</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.100</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity5" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Cumin Seeds', 100, 'quantity5')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/Garam-masala-powder-ed-pi6ik52q4a5jepze8t34j2vzkxji3k1jcjjrxlptl4.jpg" style="clear:both";>
+        <h2>Garam Masala</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.180</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity6" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Garam Masala', 180, 'quantity6')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/fennel-seeds-whole-spiceitupp-buy-online-2-pfv0bnrt5yzy9s2v76ib85fn3y8c1uctv3indb8emg.jpg" style="clear:both";>
+        <h2>Fennel Seeds </h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.90</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Fennel Seeds', 90, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/fenugreekseeds-in-a-bowl-min-pcafvo67m5bhswpx9jm6jmtvlwnwmpo4ux95kca6fc.jpg" style="clear:both";>
+        <h2>Fenugreek</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.100</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity8" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Fenugreek', 100, 'quantity8')">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/green-cardamom-with-seeds-elaichi-image-indian-spice-piuljmtyhmc2c7jq1nbbygvcpu2bdii9j3al9y4i6g.jpg" style="clear:both";>
+        <h2>Green Cardamom ( Choti Elaichi)</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity9" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Green Cardamom ( Choti Elaichi)', 500, 'quantity9')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/Whole-chillies750-pi7f24qoyfs6pei8bjjl4u4ycut14mtovgjemmyknc.jpg" style="clear:both";>
+        <h2>Kashmiri Chillies (Kashmiri Mirch)</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.200</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity10" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Kashmiri Chillies (Kashmiri Mirch)', 200, 'quantity10')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/saffron-spice-image-buy-online-spiceitupp-pi7ew4jtajk8j389dy3e7coxq8ely8zfdqhq8zv4eg.jpg" style="clear:both";>
+        <h2>Saffron (Kesar)</h2>
+        <div class="price-container">
+          <p>1 gram</p>
+          <div class="small-box">
+              <p>Rs.170</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity11" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Saffron (Kesar)', 170, 'quantity11')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://spiceitupp.com/wp-content/uploads/elementor/thumbs/Nigella-seeds-image-resized-min-2-pcrlen6hvtuemozq006j2q4ihf13lv38o0rhw674zs.jpg" style="clear:both";>
+        <h2>Nigella Seeds (Kalounji)</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.200</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity12" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Nigella Seeds (Kalounji)', 200, 'quantity12')">Add to Cart</button>
+    </div>
+</div>
+        
+        
+ </div>
+  <div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent = `${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>

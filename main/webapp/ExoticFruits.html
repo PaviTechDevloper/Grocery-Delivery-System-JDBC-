@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url(" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7l4MKLwvmWpXMy5bmjY6JiI3SFUdmk9YfWiBlJEnuqvsjKbJVabeQ-9fHfHGxCIdKAs&usqp=CAU");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 60px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #007BfF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color:white;">Exotic Fruits</h1>
+</center>
+ <div class="line-container">
+ 
+ 
+ <div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1ada8c5c-7cc3-42f8-96dd-b1023a2650c4_425x425.jpg">
+        <h2>Blueberries</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.800</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Blueberries', 800, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ <div class="card">
+    <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVf0R4kDk1DXnuwEATPW_JutAYbRjCeqSanA&usqp=CAU">
+    <h2>Apples</h2>
+    <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.190</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Apples', 190, 'quantity2')">Add to Cart</button>
+    </div>
+    
+</div>
+  
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwsD2gta3rUrNQvKAKIIQ-xmZb-Hzt1zgPw&usqp=CAU">
+        <h2>Raspberry</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.750</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Raspberry', 750, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXSP090Mw0IdwG6hAkNdQ9xio3qWsP2Vzsug&usqp=CAU">
+        <h2>Orange</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.200</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Orange', 200, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHab518MyaoJfSB9QtULqP_PtIj0ALw5BfHg&usqp=CAU" style="clear:both";>
+        <h2>Lychee</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.200</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity5" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Lychee', 200, 'quantity5')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLRaIZZcrnnvlsIG_xD8YLnOiRx17x46QjEYbPl0IqN1Uykxs_3hjHtV8DuTx3CSCfyM&usqp=CAU" style="clear:both";>
+        <h2>Mongosteen</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.120</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity6" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Mongosteen', 120, 'quantity6')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://i.mscwlns.co/mosaic-wellness/image/upload/f_auto,w_1000,c_limit/v1639031532/BW%20BLOG/Untitled-design--11--min.jpg" style="clear:both";>
+        <h2>Avocada</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.400</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Avacoda', 400, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Rqu64X6DA83uPNzn4nFWhNht8FMFS6v1Ww&usqp=CAU" style="clear:both";>
+        <h2>Dragon Fruit</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.250</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity8" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Dragon Fruit', 250, 'quantity8')">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8jCmXLZ434M2TfNSTW31TV3RxGoP_TOqviQ&usqp=CAU" style="clear:both";>
+        <h2>Star Fruit</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.60</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity9" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Star Fruit', 60, 'quantity9')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTxlgm8kX63G1xS0hnS8s8CVZcNPv_BeJQg&usqp=CAU" style="clear:both";>
+        <h2>Jack Fruit</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.450</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity10" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Jack Fruit', 500, 'quantity10')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://www.verywellhealth.com/thmb/hXMvqirIZ98Gn6w5bkhO4UkkXRE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1392614128-b6ff76b34a7f429995ed571015d1a680.jpg" style="clear:both";>
+        <h2>Mango</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.180</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity11" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Mango', 180, 'quantity11')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyg0JvJ1ehloiC1RUUzSTsy_9DN2e6LHFguUammnTxzMkivGS6tg9ucJ4i8JPa38XEQ6M&usqp=CAU" style="clear:both";>
+        <h2>Guava</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.80</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity12" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Guava', 80, 'quantity12')">Add to Cart</button>
+    </div>
+</div>
+        
+        
+ </div>
+<div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent = `${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>

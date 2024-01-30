@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+    body {
+     background-image: url("https://media.gettyimages.com/id/158698224/photo/coupe-shopping-for-groceries.jpg?s=612x612&w=0&k=20&c=yoN0w_D6J0Q8hULnxccBBrCUeLIIYzX2JBA7VO1wYaE=");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     font-family: Arial, sans-serif;
+     display: flex;
+     justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      
+      
+    }
+
+    .card {
+      width: 500px;
+      height: 300px;
+      display:flex;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px;
+      margin-left: auto;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 2.0em;
+      margin-bottom: 10px;
+    }
+
+    .card-description {
+      color: black;
+    }
+   .card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #12ef06;; /* Change this color to your desired color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+}
+    
+ 
+    
+  
+  </style>
+  <title>Card Format</title>
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <h2 class="card-title">PLACE YOUR ORDER AND RELEX</h2>
+      <p class="card-description">The supermarket typically comprises meat, 
+      fresh produce, dairy, and baked goods aisles, along with shelf space reserved for canned 
+      and packaged goods as well as for various non-food items such as kitchenware, household cleaners, 
+      pharmacy products and pet supplies.</p>
+      <center><button onclick="tonext()"class="card-button" >Shop Now</button></center>
+    </div>
+  </div>
+  <script>
+  function tonext(){
+	  window.location.href="Goods.html";
+  }
+  </script>
+
+
+</body>
+</html>
